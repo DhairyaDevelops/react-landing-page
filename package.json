@@ -1,0 +1,23 @@
+{
+  "name": "fieldnote-studio-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An original, responsive React portfolio demonstration for a fictional creative studio.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.0"
+  }
+}
