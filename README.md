@@ -4,6 +4,19 @@ An original, responsive landing-page demonstration for **Fieldnote Studio**, a f
 
 **This is a portfolio concept, not client work.** The miniature brands and design explorations are fictional. There are no real enquiries, commercial results, testimonials or live customer records.
 
+[Try the live demo](https://dhairyadevelops.github.io/react-landing-page/) · [Read the case study](CASE_STUDY.md)
+
+Explore the interface, then read the design decisions, walkthrough and tested boundaries.
+
+![Desktop preview of the Fieldnote Studio landing page](preview-desktop.png)
+
+<details>
+<summary>Mobile preview</summary>
+
+![Mobile preview](preview-mobile.png)
+
+</details>
+
 ## What is here
 
 Four content sections, plus a navigation bar and footer:
@@ -79,9 +92,22 @@ index.html             Language, title and social metadata
 
 ## Scope and limitations
 
-This is a single-page front-end demonstration. It has no backend, authentication, payment processing, analytics, live form delivery, deployment or production support. It has no external API calls, remote assets or tracking scripts. During development Vite uses its local hot-reload connection; that is not part of the production bundle.
+This is a single-page front-end demonstration. It has no backend, authentication, payment processing, analytics, live form delivery or production support. It has no external API calls, remote assets or tracking scripts. During development Vite uses its local hot-reload connection; that is not part of the production bundle.
 
-Before a production launch, replace fictional material with approved content, confirm asset rights, add a privacy-reviewed contact workflow, choose hosting and configure deployment-specific metadata. The default Vite base path assumes deployment at a domain root; a subdirectory deployment requires its own base-path configuration.
+Before a production launch, replace fictional material with approved content, confirm asset rights, add a privacy-reviewed contact workflow and configure deployment-specific metadata.
+
+## Static demo publishing
+
+`vite.config.js` sets the base path to `/react-landing-page/`. The `docs/` directory is a checked-in static build for GitHub Pages (source: `main`, folder: `/docs`). It is generated output, not a second implementation.
+
+```sh
+npm ci
+npm test
+npm run build:pages
+npm run preview -- --outDir docs
+```
+
+After changing source files, rebuild and publish the complete updated `docs/` folder. `public/.nojekyll` is copied into the build. Update the Vite base path if hosting under a different URL path. GitHub Pages serves the files; the demo itself sends no form data or analytics.
 
 ## Provenance
 
